@@ -9,7 +9,7 @@ import math
 
 def k_means (data, k):
 	""" Returns updated data with classifiers for k clusters 
-	and a centroid for each clusters. """
+	and a centroid for each cluster. """
 
 	instances = data.shape[0]
 	labels = np.ones((instances, 1)) # classifiers
