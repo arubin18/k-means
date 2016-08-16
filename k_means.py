@@ -110,15 +110,13 @@ def path_plot (centroids, k):
 		ys[cluster] = []
 
 	for i in range(len(centroids)):
-		for j in range(k):
-			if i % k == j:
-				x, y = centroids[i, :2]
+		cluster = i % k
+		x, y = centroids[i, :2]
 
-				xs[j] += [x]
-				ys[j] += [y]
+		xs[cluster] += [x]
+		ys[cluster] += [y]
 
-				plt.plot(x, y, 'ro')
-				break
+		plt.plot(x, y, 'ro')
 
 	for cluster in range(k):
 		plt.plot(xs[cluster], ys[cluster], 'r')
