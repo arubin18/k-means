@@ -18,7 +18,7 @@ def main():
 
 	a = np.genfromtxt('iris.txt', dtype = str, delimiter=',')
 	n = a.shape[1]
-	labels = a[:, n-1] # labels on the far right column
+	labels = a[:, n-1]  # labels on the far right column
 	data = a[:, 0:n-1]  # removes labels
 	data = data.astype(float)
 	k = total_clusters(labels)
