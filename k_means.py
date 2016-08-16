@@ -139,9 +139,7 @@ def plot_data(data, k):
 	colors = list(color_generator(k))
 
 	for i in range(0, m):
-		label = labels[i]
-		for j in range(k):
-			if label == j:
-				plt.scatter(data[i,0], data[i,1], color=colors[j])
+		cluster = int(labels[i])
+		plt.scatter(data[i,0], data[i,1], color=colors[cluster])
 
 	plt.show()
